@@ -1,0 +1,30 @@
+name: bluebell
+mode: "dev"
+version: "v0.0.1"
+port: 8080
+start_time: "2022-06-29"
+machine_id: 1
+
+log:
+  level: "debug"
+  filename: "log.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "5956"
+  dbname: "db_bluebell"
+  max_open_cons: 128
+  max_idle_cons: 16
+
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+  pool_size: 100
+
