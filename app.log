@@ -1,0 +1,6 @@
+{"level":"DEBUG","time":"2023-02-06T15:21:39.940+0800","caller":"bluebell/main.go:23","msg":"logger init success."}
+{"level":"DEBUG","time":"2023-02-06T15:39:05.979+0800","caller":"bluebell/main.go:24","msg":"logger init success."}
+{"level":"DEBUG","time":"2023-02-06T15:47:42.865+0800","caller":"bluebell/main.go:25","msg":"logger init success."}
+{"level":"DEBUG","time":"2023-02-06T15:48:34.115+0800","caller":"bluebell/main.go:25","msg":"logger init success."}
+{"level":"DEBUG","time":"2023-02-06T15:48:40.730+0800","caller":"bluebell/main.go:25","msg":"logger init success."}
+{"level":"DEBUG","time":"2023-02-06T15:50:16.419+0800","caller":"bluebell/main.go:25","msg":"logger init success."}
