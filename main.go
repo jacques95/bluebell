@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bluebell/controllers"
 	"bluebell/dao/mysql"
 	"bluebell/dao/redis"
 	"bluebell/logger"
+	"bluebell/pkg/snowflake"
 	"bluebell/routes"
 	"bluebell/settings"
 	"context"
@@ -44,16 +46,16 @@ func main() {
 	defer redis.Close()
 
 	// 5、 初始化 ID
-	//if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
-	//	fmt.Printf("init snowflake failed, err:%v\n", err)
-	//	return
-	//}
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+		fmt.Printf("init snowflake failed, err:%v\n", err)
+		//return
+	}
 
 	// 5、 初始化 gin 内置校验器的翻译器
-	//if err := controllers.InitTrans("zh"); err != nil {
-	//	fmt.Printf("init validator trans failed, err:%v\n", err)
-	//	return
-	//}
+	if err := controllers.InitTrans("zh"); err != nil {
+		fmt.Printf("init validator trans failed, err:%v\n", err)
+		return
+	}
 
 	// 6、 注册路由器
 	r := routes.Setup()
